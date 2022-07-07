@@ -2,13 +2,13 @@ import React, { useContext } from 'react';
 import { Context } from '../context';
 
 function MiniWeatherCard() {
-  const { city, setCity, weather, setWeather } = useContext(Context);
-  const current = weather?.current;
-  const location = weather?.location;
-  console.log(weather, 'weather');
+  const { currentWeather, setCurrentWeather } = useContext(Context);
+  const current = currentWeather?.current;
+  const location = currentWeather?.location;
+  //console.log(currentWeather, 'weather');
   return (
     <div className="dashboard__card-mini">
-      {weather && (
+      {currentWeather && (
         <>
           <div className="mini__info">
             <div className="mini__info-icon">
